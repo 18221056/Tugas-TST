@@ -10,6 +10,7 @@ from .auth import (
     UserUpdate,
     UserResponse,
     UserLogin,
+    UserGetMeResponse,
     UserLoginResponse,
     UserDeleteResponse
 )

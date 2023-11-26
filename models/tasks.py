@@ -11,6 +11,7 @@ class TaskBase(BaseModel):
     status: str
 
 class TaskCreate(TaskBase):
+    user_id: List[str] 
     created_at: datetime = datetime.now()
     updated_at: Optional[datetime] = None
 
@@ -32,6 +33,7 @@ class TaskResponse(BaseModel):
     level: str
     category: str
     status: str
+    user_id: List[str]
     created_at: Optional[datetime]
     updated_at: Optional[datetime]
 

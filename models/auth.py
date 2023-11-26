@@ -8,6 +8,7 @@ class UserBase(BaseModel):
     password: str
 
 class UserCreate(UserBase):
+    role: str
     created_at: datetime = datetime.now()
     updated_at: Optional[datetime] = None
 
@@ -21,11 +22,21 @@ class UserResponse(BaseModel):
     id: str
     email: str
     username: str
+    role: str
+    created_at: Optional[datetime]
+    updated_at: Optional[datetime]
+    
+class UserGetMeResponse(BaseModel):
+    id: str
+    email: str
+    username: str
+    role: str
+    exp: int
     created_at: Optional[datetime]
     updated_at: Optional[datetime]
     
 class UserLogin(BaseModel):
-    email: str
+    username: str
     password: str
 
 class UserLoginResponse(BaseModel):

@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException, status
-from models import UserCreate, UserUpdate, UserResponse, UserDeleteResponse, UserLogin, UserLoginResponse
+from models import UserUpdate, UserResponse, UserDeleteResponse
 from typing import List
 from pydantic import ValidationError
 from service import delete_user, update_user, get_users, get_user
